@@ -3,11 +3,12 @@
 
 android {
   dependencies {
+    def googlePlayServicesVersion = project.hasProperty('googlePlayServicesVersion') ? project.googlePlayServicesVersion : '16.0.1'
     compile group: 'com.facebook.android', name: 'account-kit-sdk', version: '4.29.0', {
         exclude group: 'com.google.android.gms', module: 'play-services-auth-api-phone'
         exclude group: 'com.google.android.gms', module: 'play-services-auth'
     }
-    compile 'com.google.android.gms:play-services-auth:15.0.1'
+    compile group: 'com.google.android.gms', name: 'play-services-auth', version: googlePlayServicesVersion
   }
 }
 

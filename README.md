@@ -61,6 +61,16 @@ Add the following as your `strings.xml` file under `app/App_Resources/Android/sr
 </resources>
 ```
 
+#### Google Play Services Version
+The plugin will default to [this version](https://github.com/praveenkatha/nativescript-facebook-account-kit/blob/master/src/platforms/android/include.gradle) of the Android `play-services-auth` SDK.
+If you need to change the version (to for instance the latest version), you can add a project ext property `googlePlayServicesVersion` to `app/App_Resources/Android/app.gradle`:
+
+```
+project.ext {
+    googlePlayServicesVersion = "+"
+}
+```
+
 ## Usage 
 
 Initialize the plugin with the response type you seek either `AuthorizationCode` or `AccessToken`
